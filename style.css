@@ -1,0 +1,169 @@
+/* ==========================================================================
+   LAMBORGHINI REVUELTO — LUXURY EDITORIAL (MONOCHROME LUXE)
+   Strict Visual Principles:
+   - 100% Flat Black: #000000 (Zero Gradients, Zero Glows, Zero Neon)
+   - Pure White: #FFFFFF / Neutral Gray: #71717A / Divider Gray: #27272A
+   - Watermark Gray: #121214
+   - Strict Architectural Minimalist Typography
+   ========================================================================== */
+
+/* Reset & Global Canvas */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #000000 !important;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Lenis Scroll Engine Optimization */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272A;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #71717A;
+}
+
+/* Selection Color: Minimal high contrast */
+::selection {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* Performance Optimizations for High Refresh-Rate Displays */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.will-change-both {
+  will-change: transform, opacity;
+}
+
+/* Editorial Typography Helpers */
+.tracking-ultra {
+  letter-spacing: 0.35em;
+}
+
+.tracking-editorial {
+  letter-spacing: 0.22em;
+}
+
+.tracking-title {
+  letter-spacing: 0.15em;
+}
+
+/* Pinned Anatomy Frame Cross-Fade States */
+.anatomy-media-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: none; /* Managed strictly by GSAP ticker */
+  will-change: transform, opacity;
+}
+
+.anatomy-caption-layer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  will-change: transform, opacity;
+}
+
+/* Video Modal Flat Dark Backdrop */
+.modal-flat-backdrop {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+/* Subtle Underline Link Transitions */
+.editorial-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.editorial-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-link:hover::after {
+  transform: scaleX(0.4);
+}
+
+/* Thin 1px Horizontal Dividers */
+.divider-line {
+  border-top: 1px solid #27272A;
+}
+
+/* Clean Input Styling on Pure Black */
+.input-editorial {
+  background-color: #000000;
+  border: 1px solid #27272A;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  padding: 0.875rem 1rem;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.input-editorial:focus {
+  border-color: #FFFFFF;
+}
+
+.input-editorial::placeholder {
+  color: #52525B;
+}
